@@ -1,0 +1,26 @@
+# Nmap 7.80 scan initiated Sun May 24 12:51:26 2020 as: nmap -vv -sC -sV -oN nmap/initial 10.10.251.9
+Increasing send delay for 10.10.251.9 from 0 to 5 due to 245 out of 815 dropped probes since last increase.
+Nmap scan report for 10.10.251.9
+Host is up, received reset ttl 63 (0.19s latency).
+Scanned at 2020-05-24 12:51:27 EDT for 35s
+Not shown: 998 closed ports
+Reason: 998 resets
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 98:0e:f2:46:c9:53:8c:7c:bb:71:1c:c1:48:ab:ac:b8 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3hRxkgjdptz5EAjB1nxLsZn4TW8ej43oQUJeW9AgtFn08Re32Nq9eS9Si3/qUxXEXsZELqAmyPXUE7MeN4h66w7K1tID/5KokMY1Tp6rYpxygBVgfeRQe41G0Zvp4T1ienmrXzVNptRmxup/WjkY9+co7AGlrR8KS1Zyr06aZ8+i51FItB0FKKpybS8cnfWyEQAk/n3/Xw/0haGW7RqWLslM1QItlco6Lm1PVxxDySuGxEs3oPx7i8Pfn/Ppe3lSVV4+vDOLfAOoJLJBdx5/h8meVs4han9RgNuuMC7BhMOzv8cJy3xwn9KLNEKUb9vyNtsdLUkAwAnUb83bXTHVf
+|   256 68:0f:2a:dc:89:fb:dc:a3:4c:2c:3b:36:b7:b8:8c:1a (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGgMzocgzlSYHs7Iam67/2t6/5YM9VPaZi2emMNLsOQ5/H/7vyO3x1rwOLCHD+D1dxn/bkF907s/ifsJ7zzjN9s=
+|   256 80:6c:05:4a:6e:ca:09:5b:ae:c0:40:b5:61:86:16:13 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ5R5gy5Ck8xfH8YbRPoLBIM90rItLvVHT3PxjSP0THX
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: POST OPTIONS GET HEAD
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Rick is sup4r cool
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun May 24 12:52:02 2020 -- 1 IP address (1 host up) scanned in 36.19 seconds
