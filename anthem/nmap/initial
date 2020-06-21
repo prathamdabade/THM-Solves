@@ -1,0 +1,74 @@
+# Nmap 7.80 scan initiated Wed Jun 10 12:01:05 2020 as: nmap -sC -sV -oN nmap/initial -vv 10.10.230.243
+Nmap scan report for 10.10.230.243
+Host is up, received echo-reply ttl 127 (0.15s latency).
+Scanned at 2020-06-10 12:01:05 EDT for 37s
+Not shown: 995 closed ports
+Reason: 995 resets
+PORT     STATE SERVICE       REASON          VERSION
+80/tcp   open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 4 disallowed entries 
+|_/bin/ /config/ /umbraco/ /umbraco_client/
+|_http-title: Anthem.com - Welcome to our blog
+135/tcp  open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds? syn-ack ttl 127
+3389/tcp open  ms-wbt-server syn-ack ttl 127 Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: WIN-LU09299160F
+|   NetBIOS_Domain_Name: WIN-LU09299160F
+|   NetBIOS_Computer_Name: WIN-LU09299160F
+|   DNS_Domain_Name: WIN-LU09299160F
+|   DNS_Computer_Name: WIN-LU09299160F
+|   Product_Version: 10.0.17763
+|_  System_Time: 2020-06-10T16:01:35+00:00
+| ssl-cert: Subject: commonName=WIN-LU09299160F
+| Issuer: commonName=WIN-LU09299160F
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2020-04-04T22:56:38
+| Not valid after:  2020-10-04T22:56:38
+| MD5:   2814 61de 95b7 e9b5 4789 3027 7f1f 60d2
+| SHA-1: d47d 2a8f 6143 b820 936e 4120 cdd1 9ddc 5385 d285
+| -----BEGIN CERTIFICATE-----
+| MIIC4jCCAcqgAwIBAgIQObhN9c8QnIVGx+ZslzEOmzANBgkqhkiG9w0BAQsFADAa
+| MRgwFgYDVQQDEw9XSU4tTFUwOTI5OTE2MEYwHhcNMjAwNDA0MjI1NjM4WhcNMjAx
+| MDA0MjI1NjM4WjAaMRgwFgYDVQQDEw9XSU4tTFUwOTI5OTE2MEYwggEiMA0GCSqG
+| SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDA4MPIi4yCYJlBv6vwXF5lu5NbQCPQxk4q
+| 7lJsJSvTRSIFi2fVl3l+rWTr69mutnVqo+bMilJorN2B6DqsCJBV+7pITFSICM6b
+| +G/sOEblVust2tUU8NLbAiBH9oXhF0P5dIhMzRC4pcZjhCRR+IcOjnABTCkdAchD
+| Mf4XQJx6GZOXBCBMXGW/vCKZ0q8gti7Hxs36W1ctbj8/i5obd0k0BonMlvRwKxvi
+| 7SS+3NrBpc4XivD23YIqCNzErOB19DV3JqZMvbE+NhLEQA51Au2svYwgoJcIIyEC
+| HBuINXeFBB+p5dMwp4wppkHN0CuquUyCBZvIPlDW8SAOAc5tgUOJAgMBAAGjJDAi
+| MBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG9w0BAQsF
+| AAOCAQEAAziR6P3nN9/EKLhZqJKgkWP9FyNr9CusD78wem1C5fn9h7SjS1PQEhn1
+| Gi50rlcUmII4E8Bnv6g/1QZnZIsPtVzO3bokQfbhTEzWOQ8RScB3ZQ+Tg7xM4duA
+| NZdzR1/hjOOmPBV4ih3+AKmbEZ63V3PuJOn2+0/NsGXzGKhaNhlAof58lXkXrt9x
+| DvmpyfER7oq/3+kPQhXlNK7VZ/dp26BLFQT12be1yyeVck2n/90pXTxV/COaIdsF
+| q7RJPVO+4FCua77sUUSV9E5CL3oOFJT5MjkAMEkoKsU9InWHhA5w+ndQqDgXIb40
+| 7b3pD6AiS/ZEvSpzCyeVnDprZxVIaQ==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2020-06-10T16:01:43+00:00; +2s from scanner time.
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1s, deviation: 0s, median: 1s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 8726/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 56118/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 11975/udp): CLEAN (Timeout)
+|   Check 4 (port 13197/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-06-10T16:01:35
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jun 10 12:01:42 2020 -- 1 IP address (1 host up) scanned in 36.72 seconds
