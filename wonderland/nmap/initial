@@ -1,0 +1,18 @@
+# Nmap 7.80 scan initiated Thu Jul  9 01:33:41 2020 as: nmap -sC -sC -v -oN nmap/initial 10.10.19.244
+Increasing send delay for 10.10.19.244 from 0 to 5 due to 98 out of 325 dropped probes since last increase.
+Nmap scan report for 10.10.19.244
+Host is up (0.19s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+| ssh-hostkey: 
+|   2048 8e:ee:fb:96:ce:ad:70:dd:05:a9:3b:0d:b0:71:b8:63 (RSA)
+|   256 7a:92:79:44:16:4f:20:43:50:a9:a8:47:e2:c2:be:84 (ECDSA)
+|_  256 00:0b:80:44:e6:3d:4b:69:47:92:2c:55:14:7e:2a:c9 (ED25519)
+80/tcp open  http
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Follow the white rabbit.
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Thu Jul  9 01:34:23 2020 -- 1 IP address (1 host up) scanned in 41.83 seconds
